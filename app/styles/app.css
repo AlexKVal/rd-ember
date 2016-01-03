@@ -1,0 +1,9 @@
+.img {
+  margin: 5px;
+  padding: 5px;
+  border: 1px solid #aaa;
+  height: auto;
+  width: auto;
+  float: left;
+  text-align: center;
+}
