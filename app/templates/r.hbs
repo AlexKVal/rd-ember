@@ -1,1 +1,18 @@
-{{outlet}}
+/r/{{model.subreddit}}
+<br>
+{{#each pictures as |pic|}}
+  {{#if pic.data}}
+    {{#light-box href=pic.data.url
+      data-lightbox=pic.data.title
+      data-title=pic.data.title
+      inlineImage=false
+    }}
+      <div class="img">
+        <img src="{{pic.data.thumbnail}}" alt="pic.data.title"
+          width="110" height="90">
+      </div>
+    {{/light-box}}
+  {{/if}}
+{{else}}
+  <h3>There are no pictures at this subreddit</h3>
+{{/each}}
